@@ -37,4 +37,9 @@ public class ProductController{
         return ResultVOUtil.success();
     }
     
+    @GetMapping("/{id}")
+    public ResultVO getOne(@PathVariable("id") String id){
+        return ResultVOUtil.success(productService.findOne(id));
+    }
+    
 }
